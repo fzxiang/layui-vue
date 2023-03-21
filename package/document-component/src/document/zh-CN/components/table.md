@@ -1418,7 +1418,10 @@ export default {
       :default-toolbar="defaultToolbar5"
       v-model:selected-keys="selectedKeys5"  
       @row="rowClick5"
-      @change="change555">
+      @change="change555"
+      :resize="true"
+      :auto-cols-width="true"
+      >
     <template v-slot:toolbar>
       <lay-button size="sm" type="primary">新增</lay-button>
       <lay-button size="sm">删除</lay-button>
@@ -1461,32 +1464,40 @@ export default {
         title: "序号",
         fixed: "left",
         type: "number",
-        width: "50px",
+        width: "120px",
       },
       {
         title:"姓名",
         fixed:"left",
-        width:"200px",
         titleSlot: "name-title",
         customSlot:"name",
+        width: "200px",
         key:"name",
         align: "left"
       },
       {
         title:"年龄",
-        width: "300px",
-        key:"ages",
+        key:"age",
         ellipsisTooltip: true,
       },
       {
-        title:"备注",
-        width: "300px",
-        key:"remark",
+        title:"备注1",
+        key:"remark1",
+        ellipsisTooltip: true,
+      },
+      {
+        title:"备注2",
+        key:"remark2",
+        ellipsisTooltip: true,
+      },
+      {
+        title:"备注3",
+        key:"remark3",
         ellipsisTooltip: true,
       }
       ,{
         title:"操作",
-        width:"150px",
+        width:"250px",
         fixed:"right",
         customSlot:"operator",
         key:"operator"
@@ -1494,14 +1505,60 @@ export default {
     ]
     }, 2000)
 
-    const dataSource5 = [
-      {id:"1", name:"小明", age:"18",remark: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.'},
-      {id:"2", name:"小红", age:"20",remark: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.'},
-      {id:"3", name:"小刚", age:"20",remark: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.'},
-      {id:"4", name:"小李", age:"20",remark: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.'},
-      {id:"5", name:"小柏", age:"20",remark: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.'},
-      {id:"6", name:"小吉", age:"20",remark: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.'}
+    const dataSource5 = ref([])
+
+    setTimeout(() => {
+      dataSource5.value = [
+      {
+        id:"1", 
+        name:"小明", 
+        age:"18",
+        remark1: 'layui - vue',
+        remark2: 'layui - vue',
+        remark3: 'layui - vue',
+      },
+      {
+        id:"2", 
+        name:"小红", 
+        age:"20",
+        remark1: 'layui - vue',
+        remark2: 'layui - vue',
+        remark3: 'layui - vue',
+      },
+      {
+        id:"3", 
+        name:"小刚", 
+        age:"20",
+        remark1: 'layui - vue',
+        remark2: 'layui - vue',
+        remark3: 'layui - vue',
+      },
+      {
+        id:"4", 
+        name:"小李", 
+        age:"20",
+        remark1: 'layui - vue（谐音：类 UI) ',
+        remark2: 'layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.layui - vue（谐音：类 UI) 是 一 套 Vue 3.0 的 桌 面 端 组 件 库.',
+        remark3: '一 套Vue 3.0的桌面端组件库.',
+      },
+      {
+        id:"5", 
+        name:"小柏", 
+        age:"20",
+        remark1: 'layui - vue',
+        remark2: 'layui - vue',
+        remark3: 'layui - vue',
+      },
+      {
+        id:"6", 
+        name:"小吉", 
+        age:"20",
+        remark1: 'layui - vue',
+        remark2: 'layui - vue',
+        remark3: 'layui - vue',
+      },
     ]
+    }, 5000)
 
     const rowClick5 = function(data) {
       console.log(JSON.stringify(data))
@@ -1564,6 +1621,8 @@ export default {
 | getCheckboxProps     | 多选行属性                                            | `function`          | --         | --                 | `1.4.0` |
 | getRadioProps        | 单选行属性                                            | `function`          | --         | --                 | `1.4.0` |
 | resize               | 开启所有单元格列宽拖动                                  | `boolean`           | `false`    | `true` `false`     | `1.9.3` |
+| autoColsWidth     | 单元格宽度自适应 <span style="color:darkorange">（超过300px时则为最大宽度）</span>| `boolean`           | `false`    | `true` `false`     | `1.9.4` |
+
 
 :::
 
