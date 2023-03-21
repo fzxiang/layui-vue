@@ -1621,8 +1621,8 @@ export default {
 | span-method          | 合并算法                                              | `function`          | --         | --                 | `1.4.0` |
 | getCheckboxProps     | 多选行属性                                            | `function`          | --         | --                 | `1.4.0` |
 | getRadioProps        | 单选行属性                                            | `function`          | --         | --                 | `1.4.0` |
-| resize               | 开启所有单元格列宽拖动                                 | `boolean`           | `false`    | `true` `false`    | `1.9.4` |
-| autoColsWidth     | 单元格宽度自适应 <span style="color:darkorange">（超过300px时则为最大宽度）</span>| `boolean`           | `false`    | `true` `false`     | `1.9.4` |
+| resize               | 开启所有单元格列宽拖动                                  | `boolean`           | `false`    | `true` `false`     | `1.9.4` |
+| autoColsWidth     | 单元格宽度自适应 <span style="color:darkorange">（超过300px时则为最大宽度）</span>| `boolean`           | `false`    | `true` `false`     | `1.9.7` |
 
 
 :::
