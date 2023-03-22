@@ -15,20 +15,37 @@
 <lay-timeline>
 <lay-timeline-item title="1.9.x">
     <ul> 
+      <a name="1-9-4"></a> 
+      <li> 
+        <h3>1.9.4 <span class="layui-badge-rim">2023-03-20</span></h3> 
+        <ul> 
+          <li>[新增] table 组件 resize 属性，用于开启列宽拉伸，columns 存在同名属性，可用于开启某一列宽拉伸。</li>
+          <li>[新增] autocomplete 组件 size 属性，用于设置 input 输入框尺寸。</li>     
+          <li>[新增] upload 组件 before-upload 属性，用于设置上传前回调，参数为 file | file[]，通过返回 false 来阻止上传。</li>
+          <li>[优化] table 组件 header 样式，移除定位属性，避免与 layer 不必要的层级冲突。</li>
+        </ul>  
+      </li>
+    </ul>
+    <ul> 
       <a name="1-9-3"></a> 
       <li> 
-        <h3>1.9.3 <span class="layui-badge-rim">2023-03-13</span></h3> 
-        <ul>      
+        <h3>1.9.3 <span class="layui-badge-rim">2023-03-17</span></h3> 
+        <ul> 
+          <li>[新增] table 组件 table-border-radius Css3 变量。</li>     
+          <li>[新增] dropdown 组件 dropdown-content-border-radius Css3 变量。 </li>
           <li>[优化] autocomplete 组件 selected 样式，输入内容与提示内容相匹配时，使用次色标注。 </li>
+          <li>[优化] global-border-radius 变量对 dropdown 组件下拉面板的样式影响。 </li>
+          <li>[优化] global-border-radius 变量对 table 组件样式影响。</li>
+          <li>[优化] table 组件 page 分页栏样式，修改 select 高度为 26px。</li>
         </ul>  
       </li>
     </ul>
     <ul> 
       <a name="1-9-2"></a> 
       <li> 
-        <h3>1.9.2 <span class="layui-badge-rim">2023-03-11</span></h3> 
+        <h3>1.9.2 <span class="layui-badge-rim">2023-03-13</span></h3> 
         <ul> 
-          <li>[新增] auto-complete 组件，带提示的文本输入框，用于辅助输入。<a href="https://gitee.com/layui/layui-vue/issues/I6JSOA">#I6JSOA</a></li>     
+          <li>[新增] auto-complete 组件，带提示的文本输入框，用于辅助输入。<a href="https:/gitee.com/layui/layui-vue/issues/I6JSOA">#I6JSOA</a></li>     
           <li>[新增] page 组件 showPage 属性开启时, 显示首页直达功能，从而改善易用性。<a href="https://gitee.com/layui/layui-vue/issues/I69ZW6">#I69ZW6</a></li>
           <li>[优化] page 组件 limits 所依赖的原生 select 高度, 使其与其他元素保持一致。</li>
           <li>

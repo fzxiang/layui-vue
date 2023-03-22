@@ -1416,6 +1416,7 @@ export default {
       :data-source="dataSource5" 
       :checkbox="checkbox5" :page="page5" 
       :default-toolbar="defaultToolbar5"
+      :resize="true"
       v-model:selected-keys="selectedKeys5"  
       @row="rowClick5"
       @change="change555"
@@ -1620,7 +1621,7 @@ export default {
 | span-method          | 合并算法                                              | `function`          | --         | --                 | `1.4.0` |
 | getCheckboxProps     | 多选行属性                                            | `function`          | --         | --                 | `1.4.0` |
 | getRadioProps        | 单选行属性                                            | `function`          | --         | --                 | `1.4.0` |
-| resize               | 开启所有单元格列宽拖动                                  | `boolean`           | `false`    | `true` `false`     | `1.9.3` |
+| resize               | 开启所有单元格列宽拖动                                 | `boolean`           | `false`    | `true` `false`    | `1.9.4` |
 | autoColsWidth     | 单元格宽度自适应 <span style="color:darkorange">（超过300px时则为最大宽度）</span>| `boolean`           | `false`    | `true` `false`     | `1.9.4` |
 
 
@@ -1651,6 +1652,7 @@ export default {
 | footer  | 底部扩展     | --   | `1.4.4` |
 | expand  | 嵌套面板     | { row } 在 1.8.6 版本，data 参数由 row 替代，但 data 仍然可用  | `1.4.4` |
 | customSlot  | 自定义列插槽     | { row，rowIndex，column，columnIndex } 在 1.8.6 版本，data 参数由 row 替代，但 data 仍然可用，新增 rowIndex 行索引 columnIndex 列索引 column 列信息参数  | `1.4.4` |
+
 :::
 
 ### <div id="tableColumn"></div>
@@ -1674,7 +1676,7 @@ export default {
 | fixed           | 列固定                         | `string`  | --      | `left` `right`              | --      |
 | type            | 列类型                         | `string`  | --      | `number` `checkbox` `radio` | --      |
 | children        | 表头分组                       | `string`  | --      | `number` `checkbox` `radio` | `1.4.0` |
-| resize          | 单元格列宽拖动           | `boolean` | `false`  | `true` `false`              | `1.9.3` |
+| resize          | 单元格列宽拖动                  | `boolean` | `false`  | `true` `false`             | `1.9.4` |
 
 :::
 
