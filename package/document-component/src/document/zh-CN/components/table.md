@@ -1420,7 +1420,6 @@ export default {
       v-model:selected-keys="selectedKeys5"  
       @row="rowClick5"
       @change="change555"
-      :resize="true"
       :auto-cols-width="true"
       >
     <template v-slot:toolbar>
